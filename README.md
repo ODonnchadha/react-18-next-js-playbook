@@ -73,6 +73,9 @@
             - Next.js does not allow for global in just *any* component.
             - Call-to-action styles.
     - CSS modules:
+        - *.module.css.
+        - NOTE: Class names cannot have hyphens in them as we are accessing them as JavaScript properties. 
+            - Use camelCase instead.
     - Images? Interesting.
 
 - PAGE-BASED ROUTING:

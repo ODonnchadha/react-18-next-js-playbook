@@ -1,10 +1,7 @@
+import styles from '../styles/pages/index.module.css';
 function Index() {
-    const css = { 
-        display: 'flex',
-        justifyContent: 'space-around' 
-    };
     return (
-    <div style={css}>
+    <div className={styles.cta}>
         <span>
             Sample Image 1
         </span>
