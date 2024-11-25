@@ -73,12 +73,33 @@
             - Next.js does not allow for global in just *any* component.
             - Call-to-action styles.
     - CSS modules:
-        - *.module.css.
+        - *.module.css. Individual files. Distinct classes.
         - NOTE: Class names cannot have hyphens in them as we are accessing them as JavaScript properties. 
             - Use camelCase instead.
-    - Images? Interesting.
+        - SASS. Addvanced CSS pre-processor. Compiled down the browser-friendly CSS.
+        ```javascript
+            npm install sass --save-dev
+        ```
+    - Images? Interesting. Efficient. Performance. Why?
+        - Performance-focused. e.g.: Desktop. Phone. 
+            - Single image. Create larger and smaller versions of the image.
+            - Custom element. Visual stability. Either width and height or layout-fill.
+                - webp format.
+                - This is needed for production and Next.js images:
+                    ```javascript
+                        npm i sharp
+                    ```
+                - NOTE: Cannot optimize images quite as well when sizing via CSS.
+        - Next.js image layouts:
+            - Intrinsic: Scales down to fit container width.
+            - Fixed: Sized to exactly the width and height.
+            - Responsive: Scales up and down to fit container width.
+            - Fill: Fills container's entire height and width.
+                - Supports the optional objectFit property.
 
 - PAGE-BASED ROUTING:
+    - Illusion of navigating from one page to another.
+        - Instead, simply displayportions of the downloaded application.
 
 - SERVER-SIDE RENDERING:
 
